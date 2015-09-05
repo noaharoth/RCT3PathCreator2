@@ -18,21 +18,6 @@
 
 using namespace R3ALInterop;
 
-#pragma region OvlErrorEventArgs
-
-OvlErrorEventArgs::OvlErrorEventArgs(String^ message) 
-	: _message(message)
-{
-}
-
-// Returns the OVL error message.
-String^ OvlErrorEventArgs::Message()
-{
-	return _message;
-}
-
-#pragma endregion
-
 #pragma region NativeErrorCallbackHandler
 
 NativeErrorCallbackHandler::NativeErrorCallbackHandler(MOutputLog^ owner) 

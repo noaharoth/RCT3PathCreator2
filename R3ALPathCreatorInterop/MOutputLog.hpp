@@ -25,19 +25,6 @@
 namespace R3ALInterop
 {
 
-	public ref class OvlErrorEventArgs
-	{
-	private:
-		String^ _message;
-
-	public:
-
-		OvlErrorEventArgs(String^ message);
-
-		// Returns the OVL error message.
-		String^ Message();
-	};
-
 	ref class MOutputLog;
 
 	// If provided, will get called when the first error is

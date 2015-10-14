@@ -21,6 +21,7 @@
 
 class util
 {
+
 public:
 
 	static String^ GetOvlName(String^ fileName)

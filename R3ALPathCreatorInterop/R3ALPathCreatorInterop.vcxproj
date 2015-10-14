@@ -75,14 +75,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\noaha\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Core;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21;C:\Users\noaha\Documents\Coding\squish-1.11;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\xlib;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\magick;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\demo;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib\Magick++;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\tests;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Noah\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Core;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21;C:\Users\Noah\Documents\Coding\squish-1.11;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\xlib;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\magick;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\demo;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib\Magick++;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\tests;$(IncludePath)</IncludePath>
+    <TargetName>R3AL.PC.Interop_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\noaha\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Core;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21;C:\Users\noaha\Documents\Coding\squish-1.11;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\xlib;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\magick;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\demo;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib\Magick++;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\Magick++\tests;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Noah\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Core;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21;C:\Users\Noah\Documents\Coding\squish-1.11;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\xlib;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\magick;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\demo;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\lib\Magick++;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\Magick++\tests;$(IncludePath)</IncludePath>
+    <TargetName>R3AL.PC.Interop</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -95,8 +97,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>RCT3AssetLibrary_d.lib;CORE_DB_bzlib_.lib;CORE_DB_coders_.lib;CORE_DB_filters_.lib;CORE_DB_jbig_.lib;CORE_DB_jp2_.lib;CORE_DB_jpeg_.lib;CORE_DB_lcms_.lib;CORE_DB_libxml_.lib;CORE_DB_magick_.lib;CORE_DB_Magick++_.lib;CORE_DB_png_.lib;CORE_DB_tiff_.lib;CORE_DB_ttf_.lib;CORE_DB_wand_.lib;CORE_DB_webp_.lib;CORE_DB_xlib_.lib;CORE_DB_zlib_.lib;CORE_DB_wmf_.lib;X11.lib;Xext.lib;kernel32.lib;user32.lib;gdi32.lib;odbc32.lib;odbccp32.lib;ole32.lib;oleaut32.lib;winmm.lib;wsock32.lib;advapi32.lib;squishd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\noaha\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Debug;C:\Users\noaha\Documents\Coding\squish-1.11\lib\vs9;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\VisualMagick\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>RCT3AssetLibrary_d.lib;CORE_DB_bzlib_.lib;CORE_DB_coders_.lib;CORE_DB_filters_.lib;CORE_DB_jbig_.lib;CORE_DB_jp2_.lib;CORE_DB_jpeg_.lib;CORE_DB_lcms_.lib;CORE_DB_libxml_.lib;CORE_DB_magick_.lib;CORE_DB_Magick++_.lib;CORE_DB_png_.lib;CORE_DB_tiff_.lib;CORE_DB_ttf_.lib;CORE_DB_wand_.lib;CORE_DB_webp_.lib;CORE_DB_zlib_.lib;CORE_DB_wmf_.lib;X11.lib;Xext.lib;kernel32.lib;user32.lib;gdi32.lib;odbc32.lib;odbccp32.lib;ole32.lib;oleaut32.lib;winmm.lib;wsock32.lib;advapi32.lib;squishd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Noah\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Debug;C:\Users\Noah\Documents\Coding\squish-1.11\lib\vs9;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\VisualMagick\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,8 +122,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>RCT3AssetLibrary.lib;CORE_RL_coders_.lib;CORE_RL_filters_.lib;CORE_RL_jbig_.lib;CORE_RL_jp2_.lib;CORE_RL_jpeg_.lib;CORE_RL_lcms_.lib;CORE_RL_libxml_.lib;CORE_RL_magick_.lib;CORE_RL_Magick++_.lib;CORE_RL_png_.lib;CORE_RL_tiff_.lib;CORE_RL_ttf_.lib;CORE_RL_wand_.lib;CORE_RL_webp_.lib;CORE_RL_xlib_.lib;CORE_RL_zlib_.lib;CORE_RL_wmf_.lib;CORE_RL_bzlib_.lib;X11.lib;Xext.lib;kernel32.lib;user32.lib;gdi32.lib;odbc32.lib;odbccp32.lib;ole32.lib;oleaut32.lib;winmm.lib;wsock32.lib;advapi32.lib;squish.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\noaha\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Release;C:\Users\noaha\Documents\Coding\squish-1.11\lib\vs9;C:\Users\noaha\Documents\Coding\GraphicsMagick-1.3.21\VisualMagick\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>RCT3AssetLibrary.lib;CORE_RL_coders_.lib;CORE_RL_filters_.lib;CORE_RL_jbig_.lib;CORE_RL_jp2_.lib;CORE_RL_jpeg_.lib;CORE_RL_lcms_.lib;CORE_RL_libxml_.lib;CORE_RL_magick_.lib;CORE_RL_Magick++_.lib;CORE_RL_png_.lib;CORE_RL_tiff_.lib;CORE_RL_ttf_.lib;CORE_RL_wand_.lib;CORE_RL_webp_.lib;CORE_RL_zlib_.lib;CORE_RL_wmf_.lib;CORE_RL_bzlib_.lib;X11.lib;Xext.lib;kernel32.lib;user32.lib;gdi32.lib;odbc32.lib;odbccp32.lib;ole32.lib;oleaut32.lib;winmm.lib;wsock32.lib;advapi32.lib;squish.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Noah\Documents\Visual Studio 2015\Projects\RCT3AssetLibrary\Release;C:\Users\Noah\Documents\Coding\squish-1.11\lib\vs9;C:\Users\Noah\Documents\Coding\GraphicsMagick-1.3.21\VisualMagick\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

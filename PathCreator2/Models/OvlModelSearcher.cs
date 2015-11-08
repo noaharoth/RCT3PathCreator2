@@ -174,14 +174,31 @@ namespace PathCreator
             if (queueObject == null && pathObject == null)
                 throw new ArgumentNullException("Either queueObject or pathObject must be initialized");
 
+            _queue = queueObject;
+            _path = pathObject;
+
             _regex = new Regex(RegexPattern, RegexOptions.IgnoreCase);
 
-            if (queueObject != null)
+            Reset();
+        }
+
+        /// <summary>
+        /// Resets the OvlModelSearcher object so another search can be executed.
+        /// </summary>
+        public void Reset()
+        {
+            if (_queue != null)
             {
-                _queue = queueObject;
-                
-                _ovlModels = new Dictionary<string, Action<string>>(QueueModelCount);
-                _remainingOvlModels = new List<string>(QueueModelCount);
+
+                if (_ovlModels == null)
+                    _ovlModels = new Dictionary<string, Action<string>>(QueueModelCount);
+                else
+                    _ovlModels.Clear();
+
+                if (_remainingOvlModels == null)
+                    _remainingOvlModels = new List<string>(QueueModelCount);
+                else
+                    _remainingOvlModels.Clear();
 
                 _remainingOvlModels.Add("Straight");
                 _remainingOvlModels.Add("TurnL");
@@ -199,17 +216,30 @@ namespace PathCreator
             }
             else
             {
-                _path = pathObject;
 
-                if (pathObject.IsExtended)
+                if (_path.IsExtended)
                 {
-                    _ovlModels = new Dictionary<string, Action<string>>(ExtPathModelCount);
-                    _remainingOvlModels = new List<string>(ExtPathModelCount);
+                    if (_ovlModels == null)
+                        _ovlModels = new Dictionary<string, Action<string>>(ExtPathModelCount);
+                    else
+                        _ovlModels.Clear();
+
+                    if (_remainingOvlModels == null)
+                        _remainingOvlModels = new List<string>(ExtPathModelCount);
+                    else
+                        _remainingOvlModels.Clear();
                 }
                 else
                 {
-                    _ovlModels = new Dictionary<string, Action<string>>(PathModelCount);
-                    _remainingOvlModels = new List<string>(PathModelCount);
+                    if (_ovlModels == null)
+                        _ovlModels = new Dictionary<string, Action<string>>(PathModelCount);
+                    else
+                        _ovlModels.Clear();
+
+                    if (_remainingOvlModels == null)
+                        _remainingOvlModels = new List<string>(PathModelCount);
+                    else
+                        _remainingOvlModels.Clear();
                 }
 
                 _remainingOvlModels.Add("Flat");
@@ -252,7 +282,7 @@ namespace PathCreator
                 _ovlModels.Add("SlopeStraightRight", ovl => { _path.SlopeStraightR = new MPathSection(ovl); _found++; _remainingOvlModels.Remove("SlopeStraightRight"); });
                 _ovlModels.Add("SlopeMid", ovl => { _path.SlopeMid = new MPathSection(ovl); _found++; _remainingOvlModels.Remove("SlopeMid"); });
 
-                if (pathObject.IsExtended)
+                if (_path.IsExtended)
                 {
                     _remainingOvlModels.Add("FlatFC");
                     _remainingOvlModels.Add("SlopeFC");
@@ -324,8 +354,6 @@ namespace PathCreator
             int totalToBeFound = _ovlModels.Count;
 
             int found = _found;
-
-            _found = 0; // reset
 
             PathCreatorProjectType type = PathCreatorProjectType.Queue;
 

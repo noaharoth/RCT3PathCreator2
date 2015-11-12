@@ -158,12 +158,20 @@ namespace PathCreator
 
         #endregion
 
-        /*/// <summary>
+        /// <summary>
         /// Constructor.
+        /// </summary>
+        public Project()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes the Project class.
         /// </summary>
         /// <param name="projectName">Name of the project.</param>
         /// <param name="projectType">Type of the project.</param>
-        public Project(string projectName, ProjectType projectType)
+        public void Initialize(string projectName, ProjectType projectType)
         {
             ProjectName = projectName;
             ProjectType = projectType;
@@ -179,15 +187,6 @@ namespace PathCreator
                 PathObject = new MPath();
                 QueueObject = null;
             }
-
-        }*/
-
-        /// <summary>
-        /// Constructor.
-        /// </summary>
-        public Project()
-        {
-
         }
 
         #region Private functions

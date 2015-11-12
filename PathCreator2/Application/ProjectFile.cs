@@ -243,8 +243,10 @@ namespace PathCreator
                     string projectName = r.ReadString();
                     ProjectType projectType = (ProjectType)r.ReadUInt16();
 
-                    project = new Project(projectName, projectType);
+                    project = new Project();
+                    project.Initialize(projectName, projectType);
                     project.ProjectFilePath = fileName;
+
                     projectFile = new ProjectFile(project);
 
 

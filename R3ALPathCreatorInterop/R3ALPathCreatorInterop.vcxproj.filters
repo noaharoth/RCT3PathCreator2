@@ -21,9 +21,6 @@
     <ClInclude Include="Utilities.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OvlException.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MOutputLog.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>

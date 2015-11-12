@@ -17,7 +17,6 @@
 #pragma once
 
 #include "System.hpp"
-#include "OvlException.hpp"
 
 class util
 {
@@ -36,14 +35,20 @@ public:
 		String^ common = ovlFileName;
 		String^ unique = common->Replace("common.ovl", "unique.ovl");
 
-		if (!File::Exists(common))
+		/*if (!File::Exists(common))
 			throw gcnew R3ALInterop::OvlException(String::Format("File \"{0}\" does not exist!", common));
 
 		if (!File::Exists(unique))
-			throw gcnew R3ALInterop::OvlException(String::Format("File \"{0}\" does not exist!", unique));
+			throw gcnew R3ALInterop::OvlException(String::Format("File \"{0}\" does not exist!", unique));*/
+
+		if (!File::Exists(common))
+			throw gcnew System::IO::FileNotFoundException(common);
+
+		if (!File::Exists(unique))
+			throw gcnew System::IO::FileNotFoundException(unique);
 
 		if (!Directory::Exists(destinationDirectory))
-			throw gcnew R3ALInterop::OvlException(String::Format("Directory \"{0}\" does not exist!", destinationDirectory));
+			throw gcnew System::IO::DirectoryNotFoundException(destinationDirectory);
 
 		File::Copy(common, destinationDirectory + Path::GetFileName(common));
 		File::Copy(unique, destinationDirectory + Path::GetFileName(unique));

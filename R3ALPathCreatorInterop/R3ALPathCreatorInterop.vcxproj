@@ -139,7 +139,6 @@
   <ItemGroup>
     <ClInclude Include="MOutputLog.hpp" />
     <ClInclude Include="MQueue.hpp" />
-    <ClInclude Include="OvlException.hpp" />
     <ClInclude Include="MPath.hpp" />
     <ClInclude Include="System.hpp" />
     <ClInclude Include="Utilities.hpp" />

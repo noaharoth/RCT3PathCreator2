@@ -97,6 +97,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\ProjectViewModel.cs" />
     <Compile Include="Views\HomeWindow.xaml.cs">
       <DependentUpon>HomeWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -104,8 +105,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\OvlModelSearcher.cs" />
-    <Compile Include="Application\PathCreatorProject.cs" />
-    <Compile Include="Application\PathCreatorProjectFile.cs" />
+    <Compile Include="Application\Project.cs" />
+    <Compile Include="Application\ProjectFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -151,9 +152,7 @@
       <Name>R3ALPathCreatorInterop</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

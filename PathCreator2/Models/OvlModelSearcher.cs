@@ -322,6 +322,8 @@ namespace PathCreator
 
                 }
             }
+
+            _found = 0;
         }
 
         /// <summary>

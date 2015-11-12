@@ -146,7 +146,6 @@
   <ItemGroup>
     <ClCompile Include="MOutputLog.cpp" />
     <ClCompile Include="MQueue.cpp" />
-    <ClCompile Include="OvlException.cpp" />
     <ClCompile Include="MPath.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

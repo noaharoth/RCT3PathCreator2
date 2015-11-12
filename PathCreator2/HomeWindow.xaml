@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="RCT3 Path Creator" Height="350" Width="525">
     <Canvas>
-        <Button x:Name="button" Content="Button" Canvas.Left="97" Canvas.Top="64" Width="75" Click="button_Click"/>
+        
     </Canvas>
 </Window>

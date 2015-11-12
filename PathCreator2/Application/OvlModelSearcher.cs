@@ -14,7 +14,6 @@
 * Lesser General Public License for more details.
 */
 
-using PathCreator.Models;
 using R3ALInterop;
 using System;
 using System.Collections.Generic;
@@ -29,12 +28,12 @@ namespace PathCreator
     /// </summary>
     public struct OvlModelSearchResult
     {
-        private PathCreatorProjectType _type;
+        private ProjectType _type;
         private int _modelsFound;
         private int _totalModels;
         private List<string> _remainingOvlModels;
 
-        public OvlModelSearchResult(PathCreatorProjectType type, int modelsFound, int totalModels, List<string> remainingOvlModels)
+        public OvlModelSearchResult(ProjectType type, int modelsFound, int totalModels, List<string> remainingOvlModels)
         {
             _type = type;
             _modelsFound = modelsFound;
@@ -93,7 +92,7 @@ namespace PathCreator
 
             switch (_type)
             {
-                case PathCreatorProjectType.Queue:
+                case ProjectType.Queue:
 
                     if (AllModelsFound())
                     {
@@ -108,7 +107,7 @@ namespace PathCreator
                     }
 
                     break;
-                case PathCreatorProjectType.BasicPath:
+                case ProjectType.BasicPath:
 
                     if (AllModelsFound())
                     {
@@ -123,7 +122,7 @@ namespace PathCreator
                     }
 
                     break;
-                case PathCreatorProjectType.ExtendedPath:
+                case ProjectType.ExtendedPath:
 
                     if (AllModelsFound())
                     {
@@ -357,14 +356,14 @@ namespace PathCreator
 
             int found = _found;
 
-            PathCreatorProjectType type = PathCreatorProjectType.Queue;
+            ProjectType type = ProjectType.Queue;
 
             if (_path != null)
             {
                 if (_path.IsExtended)
-                    type = PathCreatorProjectType.ExtendedPath;
+                    type = ProjectType.ExtendedPath;
                 else
-                    type = PathCreatorProjectType.BasicPath;
+                    type = ProjectType.BasicPath;
             }
 
             return new OvlModelSearchResult(type, found, totalToBeFound, _remainingOvlModels);

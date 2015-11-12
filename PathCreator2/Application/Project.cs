@@ -1,4 +1,4 @@
-﻿// PathCreatorProject.cs
+﻿// Project.cs
 
 /*
 * (C) Copyright 2015 Noah Roth
@@ -24,7 +24,7 @@ namespace PathCreator
     /// <summary>
     /// The type of Path Creator project.
     /// </summary>
-    public enum PathCreatorProjectType
+    public enum ProjectType
     {
         BasicPath,
         ExtendedPath,
@@ -34,7 +34,7 @@ namespace PathCreator
     /// <summary>
     /// Class that contains a Path/Queue object.
     /// </summary>
-    public class PathCreatorProject
+    public class Project
     {
         /// <summary>
         /// The name of the Path Creator project. Not the name of the path/queue!
@@ -44,7 +44,7 @@ namespace PathCreator
         /// <summary>
         /// The type of Path Creator project.
         /// </summary>
-        public PathCreatorProjectType ProjectType { get; set; }
+        public ProjectType ProjectType { get; set; }
 
         /// <summary>
         /// The path of the saved project file.
@@ -163,13 +163,13 @@ namespace PathCreator
         /// </summary>
         /// <param name="projectName">Name of the project.</param>
         /// <param name="projectType">Type of the project.</param>
-        public PathCreatorProject(string projectName, PathCreatorProjectType projectType)
+        public Project(string projectName, ProjectType projectType)
         {
             ProjectName = projectName;
             ProjectType = projectType;
             ProjectFilePath = null;
 
-            if (projectType == PathCreatorProjectType.Queue)
+            if (projectType == ProjectType.Queue)
             {
                 QueueObject = new MQueue();
                 PathObject = null;

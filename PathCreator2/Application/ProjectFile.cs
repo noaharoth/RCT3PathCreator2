@@ -1,4 +1,4 @@
-﻿// PathCreatorProjectFile.cs
+﻿// ProjectFile.cs
 
 /*
 * (C) Copyright 2015 Noah Roth
@@ -26,7 +26,7 @@ namespace PathCreator
     /// <summary>
     /// Holds information about a Path Creator project, which can be saved and loaded.
     /// </summary>
-    public class PathCreatorProjectFile
+    public class ProjectFile
     {
 
         #region File constants
@@ -41,13 +41,13 @@ namespace PathCreator
 
         #endregion
 
-        private PathCreatorProject _project;
+        private Project _project;
 
         /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="project">The PathCreatorProject object that will be saved</param>
-        public PathCreatorProjectFile(PathCreatorProject project)
+        public ProjectFile(Project project)
         {
             _project = project;
         }
@@ -55,7 +55,7 @@ namespace PathCreator
         /// <summary>
         /// PathCreatorProject object supplied by the PathCreatorProjectFile constructor.
         /// </summary>
-        public PathCreatorProject Project {  get { return _project; } }
+        public Project Project {  get { return _project; } }
 
         /// <summary>
         /// Saves the PathCreatorProjectFile to the specified destination.
@@ -78,7 +78,7 @@ namespace PathCreator
                     w.Write(_project.ProjectName);
                     w.Write((ushort)_project.ProjectType);
 
-                    if (_project.ProjectType == PathCreatorProjectType.Queue)
+                    if (_project.ProjectType == ProjectType.Queue)
                     {
                         MQueue queue = _project.QueueObject;
                         w.Write(queue.Name);
@@ -166,7 +166,7 @@ namespace PathCreator
         /// </summary>
         /// <param name="fileName">The path to the project file to load</param>
         /// <returns>The PathCreatorProjectFile object. Null if an error occurred.</returns>
-        public static PathCreatorProjectFile Open(string fileName)
+        public static ProjectFile Open(string fileName)
         {
             if (fileName == null)
                 throw new ArgumentNullException("fileName");
@@ -174,8 +174,8 @@ namespace PathCreator
             if (File.Exists(fileName) == false)
                 throw new FileNotFoundException($"{fileName} does not exist!");
 
-            PathCreatorProject project = null;
-            PathCreatorProjectFile projectFile = null;
+            Project project = null;
+            ProjectFile projectFile = null;
 
             BinaryReader r = null;
 
@@ -241,14 +241,14 @@ namespace PathCreator
                     }
 
                     string projectName = r.ReadString();
-                    PathCreatorProjectType projectType = (PathCreatorProjectType)r.ReadUInt16();
+                    ProjectType projectType = (ProjectType)r.ReadUInt16();
 
-                    project = new PathCreatorProject(projectName, projectType);
+                    project = new Project(projectName, projectType);
                     project.ProjectFilePath = fileName;
-                    projectFile = new PathCreatorProjectFile(project);
+                    projectFile = new ProjectFile(project);
 
 
-                    if (projectType == PathCreatorProjectType.Queue)
+                    if (projectType == ProjectType.Queue)
                     {
                         MQueue queue = new MQueue();
                         project.QueueObject = queue;

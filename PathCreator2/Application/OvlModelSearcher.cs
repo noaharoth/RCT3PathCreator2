@@ -346,9 +346,13 @@ namespace PathCreator
             {
                 match = _regex.Match(fileName);
 
-                if (match.Success && _ovlModels.ContainsKey(match.Groups[1].Value))
+                if (match.Success)
                 {
-                    _ovlModels[match.Groups[1].Value](fileName);
+                    if (match.Groups.Count < 2)
+                        continue;
+
+                    if (_ovlModels.ContainsKey(match.Groups[1].Value))
+                        _ovlModels[match.Groups[1].Value](fileName);
                 }
             }
 

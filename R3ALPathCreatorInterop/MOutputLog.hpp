@@ -120,6 +120,7 @@ namespace R3ALInterop
 
 		void RaiseErrorEvent(String^ message);
 
+		// Returns reference to native OutputLog class.
 		RCT3Debugging::OutputLog& Native();
 
 	};

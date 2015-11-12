@@ -30,6 +30,7 @@
 namespace R3ALInterop
 {
 
+	// Managed wrapper class for RCT3Asset::Queue class.
 	public ref class MQueue
 	{
 	public:
@@ -37,7 +38,7 @@ namespace R3ALInterop
 		property String^ IngameName;
 		property String^ Icon;
 		property String^ Texture;
-		property String^ Shared;
+		property String^ Shared; // Path to shared texture OVL, is not required for creating paths
 		property String^ Straight;
 		property String^ TurnL;
 		property String^ TurnR;
@@ -49,16 +50,27 @@ namespace R3ALInterop
 		property bool Recolor2;
 		property bool Recolor3;
 
+		// Constructor.
 		MQueue();
 
+		// Copies queue model OVL files to the specified destination.
+		//     * Throws System::Exception-inherited classes
 		void CopyFilesTo(String^ destination);
 
+		// Creates the texture OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateTextureOVL(String^ path, MOutputLog^ log);
 
+		// Creates the icon OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateIconOVL(String^ path, MOutputLog^ log);
 
+		// Creates the stub OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateStubOVL(String^ path, MOutputLog^ log);
 
+		// Creates the blank OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateBlankOVL(String^ path, MOutputLog^ log);
 
 	};

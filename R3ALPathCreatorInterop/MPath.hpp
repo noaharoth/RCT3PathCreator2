@@ -30,19 +30,23 @@
 namespace R3ALInterop
 {
 
+	/// Managed wrapper class fo RCT3Asset::PathSection class.
 	public value struct MPathSection
 	{
 	public:
-		property String^ Section;
+		property String^ Section; // File path to model OVL file (common.ovl file)
 
+		// Constructor.
 		MPathSection(String^ fileName);
 
 	internal:
 
+		// Converts this managed class to its unmanaged/native counterpart.
 		RCT3Asset::PathSection Convert();
 
 	};
 
+	// Managed wrapper class for RCT3Asset::Path class.
 	public ref class MPath
 	{
 	public:
@@ -51,7 +55,7 @@ namespace R3ALInterop
 		property String^ Icon;
 		property String^ TextureA;
 		property String^ TextureB;
-		property String^ Shared;
+		property String^ Shared; // Path to shared texture OVL, is not required for creating paths
 		property MPathSection Flat;
 		property MPathSection StraightA;
 		property MPathSection StraightB;
@@ -76,8 +80,8 @@ namespace R3ALInterop
 
 		#pragma region Extended properties
 
-		property unsigned int Unknown01;
-		property unsigned int Unknown02;
+		property unsigned int Unknown01; // Usually 0
+		property unsigned int Unknown02; // Usually 1
 		property MPathSection FlatFC;
 		property MPathSection SlopeFC;
 		property MPathSection SlopeBC;
@@ -94,20 +98,31 @@ namespace R3ALInterop
 		property MPathSection SlopeMidFC;
 		property MPathSection SlopeMidBC;
 		property MPathSection SlopeMidTC;
-		property MPathSection Paving;
+		property MPathSection Paving; // Is actually just a single string in files, but I used MPathSection instead for consistency
 
 		#pragma endregion
 
+		// Constructor.
 		MPath();
 
+		// Copies path model OVL files to the specified destination.
+		//     * Throws System::Exception-inherited classes
 		void CopyFilesTo(String^ destination);
 	
+		// Creates the texture OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateTextureOVL(String^ path, MOutputLog^ log);
 
+		// Creates the icon OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateIconOVL(String^ path, MOutputLog^ log);
 
+		// Creates the stub OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateStubOVL(String^ path, MOutputLog^ log);
 
+		// Creates the blank OVL files.
+		//     * Registers errors to the MOutputLog
 		void CreateBlankOVL(String^ path, MOutputLog^ log);
 
 	};

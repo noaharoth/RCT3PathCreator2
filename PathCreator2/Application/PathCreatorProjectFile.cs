@@ -14,7 +14,6 @@
 * Lesser General Public License for more details.
 */
 
-using PathCreator.Models;
 using R3ALInterop;
 using System;
 using System.Collections.Generic;

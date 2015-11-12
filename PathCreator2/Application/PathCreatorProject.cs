@@ -18,7 +18,7 @@ using R3ALInterop;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace PathCreator.Models
+namespace PathCreator
 {
 
     /// <summary>

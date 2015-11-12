@@ -158,7 +158,7 @@ namespace PathCreator
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Unable to save project \"{ _project.ProjectName }\": {e.Message}");
+                MessageBox.Show($"Unable to save project \"{ _project.ProjectName }\": { e.Message }");
             }
         }
 

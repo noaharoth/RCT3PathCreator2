@@ -158,7 +158,7 @@ namespace PathCreator
 
         #endregion
 
-        /// <summary>
+        /*/// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="projectName">Name of the project.</param>
@@ -179,6 +179,14 @@ namespace PathCreator
                 PathObject = new MPath();
                 QueueObject = null;
             }
+
+        }*/
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Project()
+        {
 
         }
 

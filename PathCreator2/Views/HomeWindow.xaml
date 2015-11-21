@@ -8,5 +8,7 @@
         Title="RCT3 Path Creator" Height="350" Width="525">
     <Canvas>
         
+        <Button x:Name="button" Style="{StaticResource TriStateButton}" Content="Button" Canvas.Left="90" Canvas.Top="64" Width="327"/>
+
     </Canvas>
 </Window>

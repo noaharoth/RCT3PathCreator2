@@ -5,7 +5,7 @@
     <!-- A button that has 3 additional states (OK, Warning, Error) TODO: add states  -->
     <Style x:Key="TriStateButton" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="Background" Value="#C7C7C7"/>
+        <Setter Property="Background" Value="#CFCFCF"/>
         <Setter Property="BorderBrush" Value="#696969"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Foreground" Value="#333333"/>

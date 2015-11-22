@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="RCT3 Path Creator" Height="350" Width="525">
     <Canvas>
-        
-        <Button x:Name="button" Style="{StaticResource TriStateButton}" Content="Button" Canvas.Left="90" Canvas.Top="64" Width="327"/>
+
+        <Button x:Name="button" Style="{StaticResource TriStateButton}" Content="Begin creating path!" Canvas.Left="207" Canvas.Top="287" Width="300"/>
+
 
     </Canvas>
 </Window>

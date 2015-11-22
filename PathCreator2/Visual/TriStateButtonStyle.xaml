@@ -1,4 +1,20 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<!-- TriStateButtonStyle.xaml -->
+    
+<!-- 
+*   (C) Copyright 2015 Noah Roth
+*
+*   All rights reserved. This program and the accompanying materials
+*   are made available under the terms of the GNU Lesser General Public License
+*   (LGPL) version 2.1 which accompanies this distribution, and is available at
+*   http://www.gnu.org/licenses/lgpl-2.1.html
+*
+*   This library is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+*   Lesser General Public License for more details.
+-->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:PathCreator">
 
@@ -11,6 +27,7 @@
         <Setter Property="Foreground" Value="#333333"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="Gainsboro"/>
         <Setter Property="Padding" Value="16,3,16,3"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -36,9 +53,9 @@
                             <Setter Property="Foreground" Value="#333333" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#1ba1e2" />
-                            <Setter Property="BorderBrush" Value="#1ba1e2"/>
-                            <Setter Property="Foreground" Value="#ffffff"/>
+                            <Setter Property="Background" Value="#1BA1E2" />
+                            <Setter Property="BorderBrush" Value="#1BA1E2"/>
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
                         </Trigger>
                         <Trigger Property="IsFocused" Value="true">
                             <Setter TargetName="Chrome" Property="BorderBrush" Value="#1ba1e2" />
